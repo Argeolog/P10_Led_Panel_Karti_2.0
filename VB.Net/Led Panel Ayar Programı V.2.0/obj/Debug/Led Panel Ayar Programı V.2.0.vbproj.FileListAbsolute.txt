@@ -10,3 +10,15 @@ E:\Led Panel Ayar Programı V.2.0\Led Panel Ayar Programı V.2.0\Led Panel Ayar 
 E:\Led Panel Ayar Programı V.2.0\Led Panel Ayar Programı V.2.0\Led Panel Ayar Programı V.2.0\obj\Debug\Led Panel Ayar Programı V.2.0.pdb
 E:\Led Panel Ayar Programı V.2.0\Led Panel Ayar Programı V.2.0\Led Panel Ayar Programı V.2.0\obj\Debug\Led Panel Ayar Programı V.2.0.vbprojAssemblyReference.cache
 E:\Led Panel Ayar Programı V.2.0\Led Panel Ayar Programı V.2.0\Led Panel Ayar Programı V.2.0\obj\Debug\Led Panel Ayar Programı V.2.0.vbproj.CoreCompileInputs.cache
+D:\HDS Otomasyon\Led Panel Kartı (P10 Ethernet,Rs232,Rs485)\SDK\VB.Net\Led Panel Ayar Programı V.2.0\bin\Debug\Led Panel Ayar Programı V.2.0.exe.config
+D:\HDS Otomasyon\Led Panel Kartı (P10 Ethernet,Rs232,Rs485)\SDK\VB.Net\Led Panel Ayar Programı V.2.0\bin\Debug\Led Panel Ayar Programı V.2.0.exe
+D:\HDS Otomasyon\Led Panel Kartı (P10 Ethernet,Rs232,Rs485)\SDK\VB.Net\Led Panel Ayar Programı V.2.0\bin\Debug\Led Panel Ayar Programı V.2.0.pdb
+D:\HDS Otomasyon\Led Panel Kartı (P10 Ethernet,Rs232,Rs485)\SDK\VB.Net\Led Panel Ayar Programı V.2.0\bin\Debug\Led Panel Ayar Programı V.2.0.xml
+D:\HDS Otomasyon\Led Panel Kartı (P10 Ethernet,Rs232,Rs485)\SDK\VB.Net\Led Panel Ayar Programı V.2.0\obj\Debug\Led Panel Ayar Programı V.2.0.vbproj.AssemblyReference.cache
+D:\HDS Otomasyon\Led Panel Kartı (P10 Ethernet,Rs232,Rs485)\SDK\VB.Net\Led Panel Ayar Programı V.2.0\obj\Debug\Led_Panel_Ayar_Programı_V._2._0.Anasayfa.resources
+D:\HDS Otomasyon\Led Panel Kartı (P10 Ethernet,Rs232,Rs485)\SDK\VB.Net\Led Panel Ayar Programı V.2.0\obj\Debug\Led_Panel_Ayar_Programı_V._2._0.Resources.resources
+D:\HDS Otomasyon\Led Panel Kartı (P10 Ethernet,Rs232,Rs485)\SDK\VB.Net\Led Panel Ayar Programı V.2.0\obj\Debug\Led Panel Ayar Programı V.2.0.vbproj.GenerateResource.cache
+D:\HDS Otomasyon\Led Panel Kartı (P10 Ethernet,Rs232,Rs485)\SDK\VB.Net\Led Panel Ayar Programı V.2.0\obj\Debug\Led Panel Ayar Programı V.2.0.vbproj.CoreCompileInputs.cache
+D:\HDS Otomasyon\Led Panel Kartı (P10 Ethernet,Rs232,Rs485)\SDK\VB.Net\Led Panel Ayar Programı V.2.0\obj\Debug\Led Panel Ayar Programı V.2.0.exe
+D:\HDS Otomasyon\Led Panel Kartı (P10 Ethernet,Rs232,Rs485)\SDK\VB.Net\Led Panel Ayar Programı V.2.0\obj\Debug\Led Panel Ayar Programı V.2.0.xml
+D:\HDS Otomasyon\Led Panel Kartı (P10 Ethernet,Rs232,Rs485)\SDK\VB.Net\Led Panel Ayar Programı V.2.0\obj\Debug\Led Panel Ayar Programı V.2.0.pdb

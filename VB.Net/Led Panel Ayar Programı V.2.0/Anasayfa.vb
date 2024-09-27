@@ -84,6 +84,13 @@ Public Class Anasayfa
         Dim RemoteipAdres As String = "192168001255"
         Dim RemoteipPort As String = "01520"
         Dim HaberlesmePortu As String = Port_Text.Text.PadLeft(5, "0")
+        Dim intx As Integer
+        If Integer.TryParse(HaberlesmePortu, intx) = False OrElse HaberlesmePortu.Length > 5 Then
+            MessageBox.Show("Panel Haberleşme Portu Geçersiz !")
+            Exit Sub
+        End If
+
+
         Dim Role1Suresi As String = "01"
         Dim Role2Suresi As String = "01"
 
@@ -215,10 +222,14 @@ Public Class Anasayfa
 
 
     Private Sub Panel_Ara_Buton_Click(sender As Object, e As EventArgs) Handles Panel_Ara_Buton.Click
-        Me.Cursor = Cursors.WaitCursor
+
         Panel_Sayısı_Label.Text = "0"
+        Application.DoEvents()
+        Me.Cursor = Cursors.WaitCursor
+        System.Threading.Thread.Sleep(50)
         GelenDatalar.Items.Clear()
         For i = 1 To 2
+
             Dim UdpBroadCast As New UdpClient
             UdpBroadCast.EnableBroadcast = True
             Dim Exencoding As Encoding = Encoding.GetEncoding("ISO-8859-9") ' Türkçe karakter problemi çözümü
@@ -226,6 +237,7 @@ Public Class Anasayfa
             UdpBroadCast.Connect("255.255.255.255", 2016) ' Dinleme Portuna Yazıyorumkii Zaten Hep Dinlemede Olucaz..
             UdpBroadCast.Send(Data, Data.Length)
             UdpBroadCast.Close()
+            System.Threading.Thread.Sleep(100)
         Next
 
         System.Threading.Thread.Sleep(1500)
@@ -265,6 +277,7 @@ Public Class Anasayfa
         If GelenDatalar.Items.Count > 0 Then
             For i = 0 To GelenDatalar.Items.Count - 1
                 Dim GelenData As String = GelenDatalar.Items(i)
+                Dim PanelPort As String = GelenData.Substring(284, 5).Replace(" ", "")
 
                 Dim Satır As DataRow = Datatablo.NewRow()
                 Satır("Panel Adı") = GelenData.Substring(42, 16).TrimEnd
@@ -274,7 +287,7 @@ Public Class Anasayfa
                 Satır("Ağ Maskesi") = ip_Parse(GelenData.Substring(231, 12))
                 Satır("Alt Ağ Geçidi") = ip_Parse(GelenData.Substring(243, 12))
                 Satır("Dns") = ip_Parse(GelenData.Substring(255, 12))
-                Satır("Port") = CInt(GelenData.Substring(284, 5))
+                Satır("Port") = PanelPort
                 Satır("Panel ID") = CInt(GelenData.Substring(32, 3))
                 Satır("Logo 1") = GelenData.Substring(65, 35).TrimEnd
                 Satır("Logo 2") = GelenData.Substring(100, 35).TrimEnd
@@ -372,6 +385,7 @@ Public Class Anasayfa
             Panel_Mac_ID_Text.Text = Gelen_Datalar_Gridview.Rows(e.RowIndex).Cells("Mac Adres").Value.ToString()
             Ip_Adres_Text.Text = Gelen_Datalar_Gridview.Rows(e.RowIndex).Cells("Ip").Value.ToString()
             Alt_Ag_Maskesi.Text = Gelen_Datalar_Gridview.Rows(e.RowIndex).Cells("Ağ Maskesi").Value.ToString()
+            Alt_Ag_Gecidi_Text.Text = Gelen_Datalar_Gridview.Rows(e.RowIndex).Cells("Alt Ağ Geçidi").Value.ToString()
             Dns_Sunucu_Adres_Text.Text = Gelen_Datalar_Gridview.Rows(e.RowIndex).Cells("Dns").Value.ToString()
             Port_Text.Text = Gelen_Datalar_Gridview.Rows(e.RowIndex).Cells("Port").Value.ToString()
             Panel_ID_No_Text.Text = Gelen_Datalar_Gridview.Rows(e.RowIndex).Cells("Panel ID").Value.ToString()
@@ -421,6 +435,10 @@ Public Class Anasayfa
 
    
     Private Sub Gelen_Datalar_Gridview_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Gelen_Datalar_Gridview.CellContentClick
+
+    End Sub
+
+    Private Sub Port_Text_TextChanged(sender As Object, e As EventArgs) Handles Port_Text.TextChanged
 
     End Sub
 End Class
